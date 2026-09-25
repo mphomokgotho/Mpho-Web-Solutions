@@ -1,14 +1,592 @@
+/* =========================================================
+   MPHO WEB SOLUTIONS
+   COMPLETE WEBSITE STYLES
+   ========================================================= */
+
+
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f1e8;
+    color: #111;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #b58a2a;
+}
+
+.quote-btn {
+    background: #111;
+    color: white;
+
+    padding: 11px 20px;
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.quote-btn:hover {
+    background: #b58a2a;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+    padding: 150px 8% 100px;
+
+    background: #f5f1e8;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    max-width: 650px;
+}
+
+.small-heading {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    color: #b58a2a;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 82px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #b58a2a;
+}
+
+.hero-text {
+    max-width: 600px;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.student-info {
+    max-width: 600px;
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.student-info strong {
+    color: #111;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    font-weight: 700;
+    font-size: 14px;
+
+    border-radius: 4px;
+
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background: #111;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #b58a2a;
+}
+
+.secondary-btn {
+    border: 1px solid #111;
+    color: #111;
+}
+
+.secondary-btn:hover {
+    background: #111;
+    color: white;
+}
+
+
+/* ================= HERO ANIMATION ================= */
+
+.hero-animation {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+
+    width: 48%;
+    height: 600px;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+}
+
+.website-card {
+    position: absolute;
+
+    background: white;
+    border-radius: 12px;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+
+    animation: floatingCard 5s ease-in-out infinite;
+}
+
+.card-one {
+    width: 360px;
+    height: 240px;
+
+    top: 100px;
+    left: 50px;
+}
+
+.card-two {
+    width: 300px;
+    height: 210px;
+
+    top: 280px;
+    right: 30px;
+
+    animation-delay: 1s;
+}
+
+.card-three {
+    width: 270px;
+    height: 190px;
+
+    top: 20px;
+    right: 10px;
+
+    animation-delay: 2s;
+}
+
+.browser-bar {
+    height: 28px;
+    background: #111;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding-left: 12px;
+}
+
+.browser-bar span {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+    background: #f5f1e8;
+}
+
+.mock-content {
+    padding: 25px;
+}
+
+.mock-title {
+    width: 55%;
+    height: 14px;
+
+    background: #111;
+    border-radius: 4px;
+
+    margin-bottom: 15px;
+}
+
+.mock-line {
+    width: 80%;
+    height: 7px;
+
+    background: #ddd;
+    border-radius: 5px;
+
+    margin-bottom: 9px;
+}
+
+.mock-line.short {
+    width: 50%;
+}
+
+.mock-boxes {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.mock-boxes div {
+    flex: 1;
+    height: 65px;
+    background: #e9dfc8;
+    border-radius: 6px;
+}
+
+.product-row {
+    display: flex;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.product {
+    flex: 1;
+    height: 80px;
+    background: #e9dfc8;
+    border-radius: 6px;
+}
+
+.football {
+    text-align: center;
+}
+
+.football-circle {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: #111;
+
+    margin: 0 auto 15px;
+}
+
+.football-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.football-buttons div {
+    width: 60px;
+    height: 22px;
+
+    background: #e9dfc8;
+    border-radius: 4px;
+}
+
+.floating-tag {
+    position: absolute;
+
+    background: #111;
+    color: white;
+
+    padding: 10px 15px;
+
+    border-radius: 4px;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    animation: floatingTag 4s ease-in-out infinite;
+}
+
+.tag-one {
+    top: 70px;
+    left: 10px;
+}
+
+.tag-two {
+    top: 250px;
+    right: 0;
+    animation-delay: 1s;
+}
+
+.tag-three {
+    bottom: 80px;
+    left: 120px;
+    animation-delay: 2s;
+}
+
+@keyframes floatingCard {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+}
+
+@keyframes floatingTag {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* ================= SECTION HEADING ================= */
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 60px;
+}
+
+.section-heading p {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #b58a2a;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.section-heading span {
+    color: #666;
+    font-size: 16px;
+}
+
+
+/* ================= SERVICES ================= */
+
+.services {
+    padding: 120px 8%;
+    background: white;
+}
+
+.service-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    padding: 35px 25px;
+
+    border: 1px solid #e5e5e5;
+    background: #fff;
+
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.service-number {
+    font-size: 13px;
+    font-weight: 800;
+    color: #b58a2a;
+
+    margin-bottom: 25px;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* ================= PORTFOLIO ================= */
+
+.portfolio {
+    padding: 120px 8%;
+    background: #f5f1e8;
+}
+
+.portfolio-card {
+    max-width: 1100px;
+    margin: 0 auto 50px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background: white;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-image {
+    min-height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-content {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-category {
+    color: #b58a2a;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.portfolio-content h3 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.portfolio-content p:not(.project-category) {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.project-btn {
+    display: inline-block;
+
+    width: fit-content;
+
+    background: #111;
+    color: white;
+
+    padding: 13px 22px;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.project-btn:hover {
+    background: #b58a2a;
+}
+
+
 /* ================= MABICIMA LIVE IMAGES ================= */
 
 .mabicima-image {
     position: relative;
+    width: 100%;
+    height: 350px;
     overflow: hidden;
     background: #f5f1e8;
 }
 
-/* Both MABICIMA images */
 .mabicima-image img {
     position: absolute;
+
     top: 0;
     left: 0;
 
@@ -16,25 +594,20 @@
     height: 100%;
 
     object-fit: cover;
+    display: block;
 
     opacity: 0;
 
     animation: mabicimaSlideshow 8s infinite;
 }
 
-/* First image */
 .mabicima-image img:first-child {
-    opacity: 1;
     animation-delay: 0s;
 }
 
-/* Second image */
 .mabicima-image img:nth-child(2) {
     animation-delay: 4s;
 }
-
-
-/* ================= IMAGE ANIMATION ================= */
 
 @keyframes mabicimaSlideshow {
 
@@ -56,6 +629,382 @@
 
     100% {
         opacity: 0;
+    }
+}
+
+
+/* ================= NEXT PROJECT ================= */
+
+.next-project {
+    background: #111;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+}
+
+.next-project span {
+    padding: 20px;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    padding: 120px 8%;
+    background: white;
+}
+
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.about-content {
+    padding: 40px;
+
+    background: #f5f1e8;
+
+    border-radius: 8px;
+}
+
+.about-content h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: #555;
+    margin-bottom: 18px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    padding: 120px 8%;
+    background: #111;
+    color: white;
+}
+
+.contact .section-heading span {
+    color: #bbb;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+}
+
+.contact-info h3,
+.contact-form h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-info > p {
+    color: #bbb;
+    margin-bottom: 35px;
+}
+
+.contact-item {
+    margin-bottom: 25px;
+}
+
+.contact-item h4 {
+    color: #b58a2a;
+    margin-bottom: 5px;
+}
+
+.contact-item a {
+    color: white;
+}
+
+.contact-item a:hover {
+    color: #b58a2a;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #444;
+
+    background: #1c1c1c;
+
+    color: white;
+
+    font-family: inherit;
+
+    border-radius: 4px;
+
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #b58a2a;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    border: none;
+
+    padding: 15px 25px;
+
+    background: #b58a2a;
+    color: white;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    border-radius: 4px;
+
+    transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: white;
+    color: #111;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #080808;
+    color: white;
+
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: auto;
+}
+
+.footer-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-content > p {
+    color: #aaa;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin: 25px 0;
+}
+
+.footer-links a {
+    font-size: 14px;
+    color: #bbb;
+
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #b58a2a;
+}
+
+.copyright {
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1000px) {
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero-animation {
+        opacity: 0.25;
+        width: 70%;
+    }
+
+    .service-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .quote-btn {
+        padding: 9px 14px;
+    }
+
+    .hero {
+        padding: 140px 25px 80px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .hero-animation {
+        width: 100%;
+        right: 0;
+        opacity: 0.12;
+    }
+
+    .card-one {
+        left: 0;
+    }
+
+    .card-two {
+        right: 0;
+    }
+
+    .card-three {
+        right: 0;
+    }
+
+    .services,
+    .portfolio,
+    .about,
+    .contact {
+        padding: 80px 20px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-card {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-image {
+        min-height: 280px;
+    }
+
+    .mabicima-image {
+        height: 280px;
+    }
+
+    .portfolio-content {
+        padding: 30px;
+    }
+
+    .portfolio-content h3 {
+        font-size: 28px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+}
+
+
+/* ================= SMALL PHONES ================= */
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 17px;
+    }
+
+    .quote-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        text-align: center;
+    }
+
+    .mabicima-image {
+        height: 230px;
+    }
+
+    .portfolio-image {
+        min-height: 230px;
+    }
+
+    .about-content {
+        padding: 25px;
     }
 
 }
