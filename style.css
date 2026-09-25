@@ -1,3 +1,4 @@
+```css
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +17,7 @@ body {
 }
 
 
- /* Navigation */
+/* Navigation */
 
 header {
     width: 100%;
@@ -284,10 +285,102 @@ section {
 }
 
 
+/* Portfolio */
+
+.portfolio {
+    padding: 90px 20px;
+    background: #f8fafc;
+}
+
+.portfolio-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.portfolio-card {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
 
 
+/* Project Image Area */
 
-        /* About */
+.portfolio-image {
+    height: 230px;
+    background: #111827;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.portfolio-image span {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* Project Logo */
+
+.project-logo {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* Project Content */
+
+.portfolio-content {
+    padding: 30px;
+}
+
+.project-category {
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.portfolio-content h3 {
+    font-size: 25px;
+    margin: 8px 0 12px;
+}
+
+.portfolio-content p {
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+.project-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    color: #1d4ed8;
+}
+
+
+/* About */
 
 .about {
     max-width: 1200px;
@@ -320,14 +413,6 @@ section {
 .about-content strong {
     color: #111827;
 }
-
-
-       
-
-
-
-
-/* Contact */
 
 
 /* Contact */
@@ -427,12 +512,6 @@ section {
 }
 
 
-       
-
-
-
-/* Footer */
-
 /* Footer */
 
 footer {
@@ -480,98 +559,76 @@ footer {
     margin-top: 20px;
     font-size: 13px;
 }
-/* Portfolio */
 
-.portfolio {
-    padding: 90px 20px;
-    background: #f8fafc;
-}
-
-.portfolio-container {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
-
-.portfolio-card {
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.portfolio-image {
-    height: 230px;
-    background: #111827;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.portfolio-image span {
-    color: white;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.portfolio-content {
-    padding: 30px;
-}
-
-.project-category {
-    color: #2563eb;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-}
-
-.portfolio-content h3 {
-    font-size: 25px;
-    margin: 8px 0 12px;
-}
-
-.portfolio-content p {
-    color: #6b7280;
-    margin-bottom: 20px;
-}
-
-.project-btn {
-    text-decoration: none;
-    color: #2563eb;
-    font-weight: bold;
-}
 
 /* Mobile */
 
 @media (max-width: 768px) {
 
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     .hero {
-    min-height: auto;
-    padding: 80px 20px;
-}
+        min-height: auto;
+        padding: 80px 20px;
+    }
 
-.hero h1 {
-    font-size: 44px;
-    letter-spacing: -1px;
-}
+    .hero h1 {
+        font-size: 44px;
+        letter-spacing: -1px;
+    }
 
-.hero-text {
-    font-size: 16px;
-}
+    .hero-text {
+        font-size: 16px;
+    }
 
-.student-info {
-    font-size: 14px;
-}
+    .student-info {
+        font-size: 14px;
+    }
 
-.hero-buttons {
-    flex-direction: column;
-    align-items: stretch;
-}
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-.primary-btn,
-.secondary-btn {
-    text-align: center;
+    .primary-btn,
+    .secondary-btn {
+        text-align: center;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .portfolio-card {
+        margin-bottom: 25px;
+    }
+
+    .portfolio-image {
+        height: 220px;
+    }
+
+    .project-logo {
+        width: 160px;
+        height: 160px;
+    }
 }
-}
+```
