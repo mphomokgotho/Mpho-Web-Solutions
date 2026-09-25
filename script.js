@@ -1,152 +1,104 @@
+/* ================= MABICIMA IMAGE SLIDESHOW ================= */
 
-/* =========================
-   MPHO WEB SOLUTIONS
-   WEBSITE JAVASCRIPT
-========================= */
+const mabicimaImages = [
+    "live.png",
+    "live1.png"
+];
+
+let mabicimaIndex = 0;
+
+const mabicimaImage = document.getElementById(
+    "mabicima-live-image"
+);
+
+if (mabicimaImage) {
+
+    setInterval(function () {
+
+        // Fade out
+        mabicimaImage.style.opacity = "0";
+
+        setTimeout(function () {
+
+            // Move to the next image
+            mabicimaIndex++;
+
+            if (mabicimaIndex >= mabicimaImages.length) {
+                mabicimaIndex = 0;
+            }
+
+            // Change image
+            mabicimaImage.src =
+                mabicimaImages[mabicimaIndex];
+
+            // Fade in
+            mabicimaImage.style.opacity = "1";
+
+        }, 800);
+
+    }, 4000);
+
+}
 
 
-/* =========================
-   NAVIGATION
-========================= */
+/* ================= HEADER SHADOW ================= */
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", function () {
+
+    if (!header) {
+        return;
+    }
+
+    if (window.scrollY > 20) {
+
+        header.style.boxShadow =
+            "0 5px 20px rgba(0, 0, 0, 0.08)";
+
+    } else {
+
+        header.style.boxShadow = "none";
+
+    }
+
+});
+
+
+/* ================= NAVIGATION ================= */
 
 const navLinks = document.querySelectorAll(".nav-links a");
 
-navLinks.forEach(function(link) {
+navLinks.forEach(function (link) {
 
-    link.addEventListener("click", function() {
+    link.addEventListener("click", function () {
 
-        navLinks.forEach(function(item) {
-            item.classList.remove("active");
-        });
+        const menu = document.querySelector(".nav-links");
 
-        link.classList.add("active");
+        if (menu) {
+            menu.classList.remove("active");
+        }
 
     });
 
 });
 
 
-/* =========================
-   CONTACT FORM
-========================= */
+/* ================= CONTACT FORM ================= */
 
-const contactForm = document.querySelector(".contact-form form");
+const contactForm =
+    document.querySelector(".contact-form form");
 
 if (contactForm) {
 
-    contactForm.addEventListener("submit", function(event) {
+    contactForm.addEventListener("submit", function (event) {
 
         event.preventDefault();
 
-        const name =
-            contactForm.querySelector('input[type="text"]').value;
-
-        const email =
-            contactForm.querySelector('input[type="email"]').value;
-
-        const business =
-            contactForm.querySelectorAll('input[type="text"]')[1].value;
-
-        const message =
-            contactForm.querySelector("textarea").value;
-
-
-        const whatsappMessage =
-            "Hello Mpho Web Solutions.%0A%0A" +
-            "Name: " + encodeURIComponent(name) + "%0A" +
-            "Email: " + encodeURIComponent(email) + "%0A" +
-            "Business: " + encodeURIComponent(business) + "%0A" +
-            "Website Request: " + encodeURIComponent(message);
-
-
-        const whatsappURL =
-            "https://wa.me/27649869333?text=" + whatsappMessage;
-
-
-        window.open(
-            whatsappURL,
-            "_blank"
+        alert(
+            "Thank you for your request. Please contact Mpho Web Solutions directly on WhatsApp or email."
         );
 
     });
 
 }
-
-
-/* =========================
-   SCROLL REVEAL
-========================= */
-
-const revealElements = document.querySelectorAll(
-    ".service-card, .portfolio-card, .about-content, .contact-info, .contact-form"
-);
-
-
-const revealObserver = new IntersectionObserver(
-    function(entries) {
-
-        entries.forEach(function(entry) {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("show");
-
-                revealObserver.unobserve(entry.target);
-
-            }
-
-        });
-
-    },
-    {
-        threshold: 0.12
-    }
-);
-
-
-revealElements.forEach(function(element) {
-
-    element.classList.add("reveal");
-
-    revealObserver.observe(element);
-
-});
-
-
-/* =========================
-   CURRENT YEAR
-========================= */
-
-const yearElement = document.querySelector(".copyright");
-
-if (yearElement) {
-
-    const currentYear = new Date().getFullYear();
-
-    yearElement.innerHTML =
-        "© " + currentYear +
-        " Mpho Web Solutions. All Rights Reserved.";
-
-}
-
-
-/* =========================
-   NAVBAR SCROLL EFFECT
-========================= */
-
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", function() {
-
-    if (window.scrollY > 50) {
-
-        header.classList.add("scrolled");
-
-    } else {
-
-        header.classList.remove("scrolled");
-
-    }
-
-});
-
