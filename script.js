@@ -7,37 +7,31 @@ const mabicimaImages = [
 
 let mabicimaIndex = 0;
 
-const mabicimaImage = document.getElementById(
-    "mabicima-live-image"
-);
+const mabicimaImage =
+    document.getElementById("mabicima-live-image");
 
 if (mabicimaImage) {
 
     setInterval(function () {
 
-        // Fade out
         mabicimaImage.style.opacity = "0";
 
         setTimeout(function () {
 
-            // Move to the next image
             mabicimaIndex++;
 
             if (mabicimaIndex >= mabicimaImages.length) {
                 mabicimaIndex = 0;
             }
 
-            // Change image
             mabicimaImage.src =
                 mabicimaImages[mabicimaIndex];
 
-            // Fade in
             mabicimaImage.style.opacity = "1";
 
         }, 800);
 
     }, 4000);
-
 }
 
 
@@ -67,13 +61,15 @@ window.addEventListener("scroll", function () {
 
 /* ================= NAVIGATION ================= */
 
-const navLinks = document.querySelectorAll(".nav-links a");
+const navLinks =
+    document.querySelectorAll(".nav-links a");
 
 navLinks.forEach(function (link) {
 
     link.addEventListener("click", function () {
 
-        const menu = document.querySelector(".nav-links");
+        const menu =
+            document.querySelector(".nav-links");
 
         if (menu) {
             menu.classList.remove("active");
