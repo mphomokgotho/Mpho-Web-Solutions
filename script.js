@@ -1,4 +1,6 @@
-/* ================= MABICIMA IMAGE SLIDESHOW ================= */
+/* =========================
+   MABICIMA IMAGE SLIDESHOW
+========================= */
 
 const mabicimaImages = [
     "live.png",
@@ -35,9 +37,11 @@ if (mabicimaImage) {
 }
 
 
-/* ================= HEADER SHADOW ================= */
+/* =========================
+   HEADER SHADOW
+========================= */
 
-const header = document.querySelector("header");
+const header = document.getElementById("header");
 
 window.addEventListener("scroll", function () {
 
@@ -59,42 +63,85 @@ window.addEventListener("scroll", function () {
 });
 
 
-/* ================= NAVIGATION ================= */
+/* =========================
+   SCROLL REVEAL
+========================= */
 
-const navLinks =
-    document.querySelectorAll(".nav-links a");
+const revealElements =
+    document.querySelectorAll(
+        ".reveal-section, .reveal-card"
+    );
 
-navLinks.forEach(function (link) {
+const revealObserver =
+    new IntersectionObserver(
+        function (entries) {
 
-    link.addEventListener("click", function () {
+            entries.forEach(function (entry) {
 
-        const menu =
-            document.querySelector(".nav-links");
+                if (entry.isIntersecting) {
 
-        if (menu) {
-            menu.classList.remove("active");
+                    entry.target.classList.add("visible");
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.15
         }
+    );
 
-    });
+
+revealElements.forEach(function (element) {
+
+    revealObserver.observe(element);
 
 });
 
 
-/* ================= CONTACT FORM ================= */
+/* =========================
+   CONTACT FORM
+========================= */
 
 const contactForm =
-    document.querySelector(".contact-form form");
+    document.getElementById("contactForm");
 
 if (contactForm) {
 
-    contactForm.addEventListener("submit", function (event) {
+    contactForm.addEventListener(
+        "submit",
+        function (event) {
 
-        event.preventDefault();
+            event.preventDefault();
 
-        alert(
-            "Thank you for your request. Please contact Mpho Web Solutions directly on WhatsApp or email."
-        );
+            const name =
+                document.getElementById("name").value;
 
-    });
+            alert(
+                "Thank you, " +
+                name +
+                ". Your enquiry has been received. Please contact Mpho Web Solutions directly on WhatsApp or email."
+            );
+
+            contactForm.reset();
+
+        }
+    );
+
+}
+
+
+/* =========================
+   FOOTER YEAR
+========================= */
+
+const year =
+    document.getElementById("year");
+
+if (year) {
+
+    year.textContent =
+        new Date().getFullYear();
 
 }
