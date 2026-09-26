@@ -1,4 +1,6 @@
-/* ================= MABICIMA IMAGE SLIDESHOW ================= */
+/* =========================
+   MABICIMA IMAGE SLIDESHOW
+========================= */
 
 const mabicimaImages = [
     "live.png",
@@ -35,9 +37,11 @@ if (mabicimaImage) {
 }
 
 
-/* ================= HEADER SHADOW ================= */
+/* =========================
+   HEADER SHADOW
+========================= */
 
-const header = document.querySelector("header");
+const header = document.getElementById("header");
 
 window.addEventListener("scroll", function () {
 
@@ -59,31 +63,12 @@ window.addEventListener("scroll", function () {
 });
 
 
-/* ================= NAVIGATION ================= */
-
-const navLinks =
-    document.querySelectorAll(".nav-links a");
-
-navLinks.forEach(function (link) {
-
-    link.addEventListener("click", function () {
-
-        const menu =
-            document.querySelector(".nav-links");
-
-        if (menu) {
-            menu.classList.remove("active");
-        }
-
-    });
-
-});
-
-
-/* ================= CONTACT FORM ================= */
+/* =========================
+   CONTACT FORM
+========================= */
 
 const contactForm =
-    document.querySelector(".contact-form form");
+    document.getElementById("contactForm");
 
 if (contactForm) {
 
@@ -91,10 +76,51 @@ if (contactForm) {
 
         event.preventDefault();
 
-        alert(
-            "Thank you for your request. Please contact Mpho Web Solutions directly on WhatsApp or email."
+        const name =
+            document.getElementById("name").value;
+
+        const email =
+            document.getElementById("email").value;
+
+        const business =
+            document.getElementById("business").value;
+
+        const message =
+            document.getElementById("message").value;
+
+        const whatsappNumber = "27649869333";
+
+        const whatsappMessage =
+            "Hello Mpho Web Solutions.%0A%0A" +
+            "Name: " + encodeURIComponent(name) +
+            "%0AEmail: " + encodeURIComponent(email) +
+            "%0ABusiness / Project: " + encodeURIComponent(business) +
+            "%0A%0AMessage:%0A" +
+            encodeURIComponent(message);
+
+        window.open(
+            "https://wa.me/" +
+            whatsappNumber +
+            "?text=" +
+            whatsappMessage,
+            "_blank"
         );
 
     });
+
+}
+
+
+/* =========================
+   CURRENT YEAR
+========================= */
+
+const yearElement =
+    document.getElementById("year");
+
+if (yearElement) {
+
+    yearElement.textContent =
+        new Date().getFullYear();
 
 }
