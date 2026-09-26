@@ -15,6 +15,7 @@ body {
     line-height: 1.6;
 }
 
+
 /* =========================
    HEADER
 ========================= */
@@ -26,15 +27,15 @@ header {
     width: 100%;
     background: #ffffff;
     z-index: 1000;
-    border-bottom: 1px solid #e5e7eb;
-    transition: box-shadow 0.3s ease;
-}
 
-header {
     padding: 18px 25px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    border-bottom: 1px solid #e5e7eb;
+    transition: box-shadow 0.3s ease;
 }
 
 .logo {
@@ -79,7 +80,9 @@ nav a:hover {
 
 .hero {
     min-height: 100vh;
+
     padding: 150px 25px 80px;
+
     background: linear-gradient(
         135deg,
         #f0f9ff,
@@ -92,40 +95,50 @@ nav a:hover {
 
 .hero-content {
     max-width: 850px;
-    margin: auto;
     width: 100%;
+    margin: auto;
 }
 
 .hero-label {
     color: #0284c7;
+
     font-size: 14px;
     font-weight: 800;
+
     letter-spacing: 2px;
+
     margin-bottom: 18px;
 }
 
 .hero-content h1 {
     font-size: 58px;
     line-height: 1.05;
+
     color: #0f172a;
+
     margin-bottom: 25px;
 }
 
 .hero-text {
     font-size: 18px;
     color: #475569;
+
     max-width: 700px;
+
     margin-bottom: 18px;
 }
 
 .hero-student {
     font-size: 15px;
+
     color: #0284c7;
+
     font-weight: 600;
 }
 
 .hero-buttons {
     margin-top: 30px;
+
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
@@ -134,27 +147,36 @@ nav a:hover {
 .primary-button,
 .secondary-button {
     display: inline-block;
+
     text-decoration: none;
+
     padding: 13px 23px;
+
     border-radius: 6px;
+
     font-weight: 700;
+
     transition: 0.3s;
 }
 
 .primary-button {
     background: #0284c7;
     color: #ffffff;
+
     border: none;
 }
 
 .primary-button:hover {
     background: #0369a1;
+
     transform: translateY(-2px);
 }
 
 .secondary-button {
     border: 2px solid #0284c7;
+
     color: #0284c7;
+
     background: #ffffff;
 }
 
@@ -174,26 +196,34 @@ nav a:hover {
 
 .section-heading {
     text-align: center;
+
     margin-bottom: 55px;
 }
 
 .section-label {
     color: #0284c7;
+
     font-size: 13px;
     font-weight: 800;
+
     letter-spacing: 2px;
+
     margin-bottom: 8px;
 }
 
 .section-heading h2 {
     font-size: 40px;
+
     color: #0f172a;
+
     margin-bottom: 12px;
 }
 
 .section-heading p:last-child {
     color: #64748b;
+
     max-width: 650px;
+
     margin: auto;
 }
 
@@ -208,36 +238,50 @@ nav a:hover {
 
 .services-grid {
     max-width: 1100px;
+
     margin: auto;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
     gap: 25px;
 }
 
 .service-card {
     background: #f8fafc;
+
     padding: 32px 25px;
+
     border-radius: 12px;
+
     border: 1px solid #e2e8f0;
+
     transition: 0.3s;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
+
     border-color: #0284c7;
+
     box-shadow:
-        0 12px 30px rgba(2, 132, 199, 0.1);
+        0 12px 30px
+        rgba(2, 132, 199, 0.1);
 }
 
 .service-card h3 {
     color: #0284c7;
+
     margin-bottom: 12px;
+
     font-size: 20px;
 }
 
 .service-card p {
     color: #64748b;
+
     font-size: 15px;
 }
 
@@ -252,35 +296,52 @@ nav a:hover {
 
 .portfolio-grid {
     max-width: 1100px;
+
     margin: auto;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
     gap: 30px;
 }
 
 .portfolio-card {
     background: #ffffff;
+
     border-radius: 14px;
+
     overflow: hidden;
+
     border: 1px solid #e0f2fe;
 
     box-shadow:
-        0 10px 30px rgba(15, 23, 42, 0.08);
+        0 10px 30px
+        rgba(15, 23, 42, 0.08);
 }
 
 .portfolio-image {
     width: 100%;
+
     height: 360px;
+
     overflow: hidden;
+
     background: #e0f2fe;
 }
 
 .portfolio-image img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
     display: block;
+}
+
+#mabicima-live-image {
+    transition: opacity 0.8s ease;
 }
 
 .portfolio-content {
@@ -289,37 +350,38 @@ nav a:hover {
 
 .portfolio-content h3 {
     font-size: 23px;
+
     color: #0f172a;
+
     margin-bottom: 8px;
 }
 
 .portfolio-content p {
     color: #64748b;
+
     margin-bottom: 20px;
 }
 
 .portfolio-button {
     display: inline-block;
+
     background: #0284c7;
+
     color: #ffffff;
+
     text-decoration: none;
+
     padding: 11px 18px;
+
     border-radius: 6px;
+
     font-weight: 700;
+
     transition: 0.3s;
 }
 
 .portfolio-button:hover {
     background: #0369a1;
-}
-
-
-/* =========================
-   MABICIMA SLIDESHOW
-========================= */
-
-#mabicima-live-image {
-    transition: opacity 0.8s ease;
 }
 
 
@@ -337,8 +399,11 @@ nav a:hover {
     color: #ffffff;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
 
     text-align: center;
@@ -346,13 +411,17 @@ nav a:hover {
 
 .plus-symbol {
     font-size: 70px;
+
     font-weight: 300;
+
     line-height: 1;
+
     margin-bottom: 15px;
 }
 
 .next-project h3 {
     font-size: 24px;
+
     margin-bottom: 5px;
 }
 
@@ -371,13 +440,17 @@ nav a:hover {
 
 .about-content {
     max-width: 850px;
+
     margin: auto;
+
     text-align: center;
 }
 
 .about-content p {
     color: #475569;
+
     font-size: 17px;
+
     margin-bottom: 18px;
 }
 
@@ -392,37 +465,46 @@ nav a:hover {
 
 .contact-details {
     max-width: 700px;
+
     margin: 0 auto 35px;
+
     text-align: center;
 }
 
 .contact-details p {
     color: #475569;
+
     margin-bottom: 10px;
 }
 
 .contact-details a {
     color: #0284c7;
+
     text-decoration: none;
+
     font-weight: 600;
 }
 
 #contactForm {
     max-width: 700px;
+
     margin: auto;
 }
 
 #contactForm input,
 #contactForm textarea {
     width: 100%;
+
     padding: 14px;
 
     margin-bottom: 15px;
 
     border: 1px solid #cbd5e1;
+
     border-radius: 6px;
 
     font-family: Arial, Helvetica, sans-serif;
+
     font-size: 15px;
 
     outline: none;
@@ -435,6 +517,7 @@ nav a:hover {
 
 #contactForm textarea {
     min-height: 140px;
+
     resize: vertical;
 }
 
@@ -450,7 +533,9 @@ nav a:hover {
 .reveal-section,
 .reveal-card {
     opacity: 0;
+
     transform: translateY(35px);
+
     transition:
         opacity 0.8s ease,
         transform 0.8s ease;
@@ -459,6 +544,7 @@ nav a:hover {
 .reveal-section.visible,
 .reveal-card.visible {
     opacity: 1;
+
     transform: translateY(0);
 }
 
@@ -469,13 +555,17 @@ nav a:hover {
 
 footer {
     background: #0f172a;
+
     color: #ffffff;
+
     text-align: center;
+
     padding: 25px;
 }
 
 footer p {
     font-size: 14px;
+
     color: #cbd5e1;
 }
 
@@ -509,12 +599,15 @@ footer p {
 
     header {
         flex-direction: column;
+
         gap: 12px;
     }
 
     nav {
         gap: 10px;
+
         flex-wrap: wrap;
+
         justify-content: center;
     }
 
@@ -573,8 +666,9 @@ footer p {
 
     .primary-button,
     .secondary-button {
-        text-align: center;
         width: 100%;
+
+        text-align: center;
     }
 
 }
