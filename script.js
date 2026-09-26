@@ -3,14 +3,15 @@
 ========================= */
 
 const mabicimaImages = [
-    "https://mphomokgotho.github.io/Mpho-Web-Solutions/live.png",
-    "https://mphomokgotho.github.io/Mpho-Web-Solutions/live1.png"
+    "live.png",
+    "live1.png"
 ];
 
 let mabicimaIndex = 0;
 
 const mabicimaImage =
     document.getElementById("mabicima-live-image");
+
 
 if (mabicimaImage) {
 
@@ -34,6 +35,7 @@ if (mabicimaImage) {
         }, 800);
 
     }, 4000);
+
 }
 
 
@@ -52,6 +54,7 @@ let kookoIndex = 0;
 
 const kookoImage =
     document.getElementById("kooko-live-image");
+
 
 if (kookoImage) {
 
@@ -75,6 +78,7 @@ if (kookoImage) {
         }, 800);
 
     }, 4000);
+
 }
 
 
@@ -85,11 +89,13 @@ if (kookoImage) {
 const header =
     document.getElementById("header");
 
+
 window.addEventListener("scroll", function () {
 
     if (!header) {
         return;
     }
+
 
     if (window.scrollY > 20) {
 
@@ -113,6 +119,7 @@ const revealElements =
     document.querySelectorAll(
         ".reveal-section, .reveal-card"
     );
+
 
 const revealObserver =
     new IntersectionObserver(
@@ -149,6 +156,7 @@ revealElements.forEach(function (element) {
 const contactForm =
     document.getElementById("contactForm");
 
+
 if (contactForm) {
 
     contactForm.addEventListener(
@@ -160,11 +168,13 @@ if (contactForm) {
             const name =
                 document.getElementById("name").value;
 
+
             alert(
                 "Thank you, " +
                 name +
                 ". Your enquiry has been received. Please contact Mpho Web Solutions directly on WhatsApp or email."
             );
+
 
             contactForm.reset();
 
@@ -180,6 +190,7 @@ if (contactForm) {
 
 const year =
     document.getElementById("year");
+
 
 if (year) {
 
