@@ -3,8 +3,8 @@
 ========================= */
 
 const mabicimaImages = [
-    "live.png",
-    "live1.png"
+    "https://mphomokgotho.github.io/Mpho-Web-Solutions/live.png",
+    "https://mphomokgotho.github.io/Mpho-Web-Solutions/live1.png"
 ];
 
 let mabicimaIndex = 0;
@@ -41,7 +41,8 @@ if (mabicimaImage) {
    HEADER SHADOW
 ========================= */
 
-const header = document.getElementById("header");
+const header =
+    document.getElementById("header");
 
 window.addEventListener("scroll", function () {
 
