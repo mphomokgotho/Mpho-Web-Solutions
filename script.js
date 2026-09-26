@@ -38,6 +38,47 @@ if (mabicimaImage) {
 
 
 /* =========================
+   KOOKO NUTS IMAGE SLIDESHOW
+========================= */
+
+const kookoImages = [
+    "k.png",
+    "k1.png",
+    "k2.png",
+    "k3.png"
+];
+
+let kookoIndex = 0;
+
+const kookoImage =
+    document.getElementById("kooko-live-image");
+
+if (kookoImage) {
+
+    setInterval(function () {
+
+        kookoImage.style.opacity = "0";
+
+        setTimeout(function () {
+
+            kookoIndex++;
+
+            if (kookoIndex >= kookoImages.length) {
+                kookoIndex = 0;
+            }
+
+            kookoImage.src =
+                kookoImages[kookoIndex];
+
+            kookoImage.style.opacity = "1";
+
+        }, 800);
+
+    }, 4000);
+}
+
+
+/* =========================
    HEADER SHADOW
 ========================= */
 
